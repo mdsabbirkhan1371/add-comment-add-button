@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Bubble list</h2>
+    <section id="section-container">
+        <h3>Bubble list iteam</h3>
+
+        <ul id="list-container">
+            <li class="item">Lorem ipsum dolor sit amet.</li>
+            <li id="second-item" class="item">Eaque dolores similique incidunt fugit.</li>
+            <li class="item">Nulla eos modi explicabo maiores.</li>
+            <li class="item">Itaque dolores accusamus illum error!</li>
+            <li class="item">Fugit laudantium ad nisi pariatur!</li>
+            <li class="item">Illo nulla possimus reiciendis assumenda!</li>
+        </ul>
+    </section>
+
+
+    <script>
+        document.getElementById('second-item').addEventListener('click', function (event) {
+            console.log('seconditem click');
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+        })
+        // for ul container
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log('ul click')
+            event.stopImmediatePropagation();
+        })
+        // for section container
+        document.getElementById('section-container').addEventListener('click', function () {
+            console.log('section click')
+            event.stopImmediatePropagation();
+        })
+
+    </script>
+</body>
+
+</html>
