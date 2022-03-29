@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="updateElement"></p>
+    <input id="input" type="text">
+    <button id="input-btn">update</button>
+    <button onclick="updateButon()">Update button</button>
+    <button id="directBTn">Direct Button</button>
+    <p id="updatesabbir"></p>
+    <input id="input2" type="text">
+    <button id="sabbirbtn">Update Sabbir</button>
+
+    <script>
+        // for sabbir input
+        document.getElementById('sabbirbtn').addEventListener('click', function () {
+            const inputFild = document.getElementById('input2');
+            const p2 = document.getElementById('updatesabbir');
+            p2.innerText = inputFild.value;
+            inputFild.value = ''
+        })
+
+        // for  input
+
+        document.getElementById('input-btn').addEventListener('click', function () {
+            const inputfield = document.getElementById('input');
+            const p = document.getElementById('updateElement');
+            p.innerText = inputfield.value;
+            inputfield.value = ' '
+
+        })
+
+        // justfunction
+        function updateButon() {
+            const p = document.getElementById('updateElement');
+            p.innerText = 'hello,world'
+
+        };
+        // directfunction
+        document.getElementById('directBTn').addEventListener('click', function () {
+            const p = document.getElementById('updateElement');
+            p.innerText = 'this is direct click'
+        })
+
+    </script>
+</body>
+
+</html>
